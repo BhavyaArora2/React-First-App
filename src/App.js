@@ -5,7 +5,25 @@ import './App.css';
 import{Navbar,Nav,NavItem,MenuItem,NavDropdown} from 'react-bootstrap';
 
 class App extends Component {
-  constructor
+  constructor(){
+    super();
+    this.state={
+      projects:[
+        {
+        title:'Aidapp website',
+        category:'web design'
+        },
+        {
+        title:'social website',
+        category:'Moile dev'
+        },
+        {
+        title:'Slack website',
+        category:'dev design'
+        },
+      ]
+    }
+  }
   render() {
     return (
       <div className="App">
@@ -36,7 +54,7 @@ class App extends Component {
           <h1 className="App-title">Welcome again to React</h1>
         </header>
         myapp
-        <Projects test=" helloww"/>
+        <Projects projects={this.state.projects}/>
       </div>
     );
   }
