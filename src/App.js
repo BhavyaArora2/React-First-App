@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import Projects from './components/Projects';
 import './App.css';
+import AddProject from './Components/Projects';
 import{Navbar,Nav,NavItem,MenuItem,NavDropdown} from 'react-bootstrap';
 
 class App extends Component {
@@ -20,9 +21,25 @@ class App extends Component {
         {
         title:'Slack website',
         category:'dev design'
-        },
+        }
       ]
     }
+  }
+  componentWillMount(){
+    this.setState({projects:[
+      {
+      title:'Aidapp website',
+      category:'web design'
+      },
+      {
+      title:'social website',
+      category:'Moile dev'
+      },
+      {
+      title:'Slack website',
+      category:'dev design'
+      }
+    ]});
   }
   render() {
     return (
